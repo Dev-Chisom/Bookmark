@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+   <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bookmark landing page | Frontend Mentor</title>
+</head>
+<body>
+    <header>
+        <nav class="nav__bar container desktop">
+            <div>
+                <img class="logo" src="images/logo-bookmark.svg" alt="Bookmark">
+            </div>
+    
+                <div>
+                    <ul class="nav__links">
+                        <li><a href="#features">FEATURES</a></li>
+                        <li><a href="#pricing">PRICING</a></li>
+                        <li><a href="#contacts">CONTACTS</a></li>
+                        <a href="#" class="btn btn-danger">LOGIN</a>
+                    </ul> 
+                </div>
+              
+            </div>
+        </nav> 
+        <div class="mobile">
+                <div class="nav__container">
+                    <img class="logo" src="images/logo-bookmark.svg" alt="Bookmark">
+                    <span class="menu-icon" onclick="openMenu()" id="icon"><i class="fas fa-bars"></i></span>
+                </div>
+                
+                <div class="menu-container" id="navbar">
+                    <div class="mobile__nav-logo">
+                        <img class="logo" src="images/logo-bookmark2.svg" alt="Bookmark">
+                        <span class="closebtn icon" onclick="closeMenu()"><i class="fas fa-times"></i></span>
+                    </div>
+                   
+                    <div class="menu-content">
+                       
+                        <ul class="nav__links">
+                            <li><a class="links" href="#features">FEATURES</a></li>
+                            <li><a class="links" href="#pricing">PRICING</a></li>
+                            <li><a class="links" href="#contacts">CONTACTS</a></li>
+                            <a href="#" class="btn btn-outline">LOGIN</a>
+                        </ul> 
+                   
+                  </div>
+                       
+                  <div class="nav__socials">
+                    <i class="fab fa-facebook-square font"></i>
+                    <i class="fab fa-twitter font"></i>    
+            </div>
+            </div>
+        </div>
+        <div class="showcase">
+           <div class="right"></div>
+           <div class="showcase__content container">
+              <div class="showcase__text">
+                <h2 class="md m-1">A Simple Bookmark<br> Manager</h2>
+                <p class="sm m-1">A clean and simple interface to organize your favorite  websites. Open a new browser tab and see your sites loads instantly. Try it for free</p>
+                <a href="#" class="m-1 btn btn-primary">Get it on Chrome</a>
+                <a href="#" class="m-1 btn btn-secondary">Get it on Firefox</a>
+              </div>
+                 <img  class="showcase__image" src="images/illustration-hero.svg" alt="">   
+           </div>
+       </div>
+        
+</header>
+    <section class="features my-4">
+        <div class="left"></div>
+        <div class="container">
+            <div class="features__content">
+                <h2 class="md">Features</h2>
+                <p class="sm m-1">Our aim is to make it a quick and easy for you to acsess your <br> favourite websites. Your bookmark sync between your devices, <br> so you can access them on the goal</p>
+            </div>
+            <div class="hero">
+                <div class="btn-box">
+                    <button id="btn1" class="btnHover" onclick="openFirst()">Simple Banking</button>
+                    <button id="btn2" onclick="openSecond()">Speedy Searching</button>
+                    <button id="btn3" onclick="openThird()">Easy Sharing</button>
+                </div>
+                <div id="content1" class="content">
+                    <div class="content-left">
+                        <img src="images/illustration-features-tab-1.svg" alt="">
+                    </div>
+                    <div class="content-right">
+                        <h2 class="m-1">Bookmarking one click</h2>
+                        <p class="m-1 sm">Organize your bookmark however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites</p>
+                        <a href="#" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+                <div id="content2" class="content">
+                    <div class="content-left">
+                        <img src="images/illustration-features-tab-2.svg" alt="">
+                    </div>
+                    <div class="content-right">
+                        <h2 class="m-1">Intelligent search</h2>
+                        <p class="m-1 sm">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks</p>
+                        <a href="#" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+                <div id="content3" class="content">
+                    <div class="content-left">
+                        <img src="images/illustration-features-tab-3.svg" alt="">
+                    </div>
+                    <div class="content-right">
+                        <h2 class="m-1">Share your bookmarks</h2>
+                        <p class="m-1 sm">Easily share your bookmarks and collections with others. Create shareable link that you can send at the click of a button</p>
+                        <a href="#" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+       <section class="download container">
+        <div class="download__content">
+            <h2 class="md">Download Content</h2>
+            <p class="sm m-1">We've got more browsers in the pipeline. Please do let us know if <br> you've got a favourite you'd like us to prioritize.</p>
+        </div>
+        <div class="download__cards">
+            <div class="download__card">
+                <img class="py-1" src="images/logo-chrome.svg" alt="">
+                <p>Add to Chrome</p>
+                <span class="sm">Minimum version 62</span>
+                <img class="py-1" src="images/bg-dots.svg" alt="">
+                <a href="#" class="btn btn-primary">Add & Install Extension</a>
+            </div>
+            <div class="download__card card2">
+                <img class="py-1" src="images/logo-firefox.svg" alt="">
+                <p>Add to Chrome</p>
+                <span>Minimum version 55</span>
+                <img class="py-1" src="images/bg-dots.svg" alt="">
+                <a href="#" class="btn btn-primary">Add & Install Extension</a>
+            </div>
+            <div class="download__card card3">
+                <img class="py-1" src="images/logo-opera.svg" alt="">
+                <p>Add to Chrome</p>
+                <span>Minimum version 46</span>
+                <img class="py-1" src="images/bg-dots.svg" alt="">
+                <a href="#" class="btn btn-primary">Add & Install Extension</a>
+            </div>
+        </div>
+    </section>
+    <section class="frequently container m-5">
+        <div class="frequently__content m-3">
+            <h2 class="md">Frequently Asked Questions</h2>
+            <p class="sm m-1">Here are some of our FAQs, if you have any other questions <br> you'd like answered please feel free to email us</p>
+        </div>
+        <div class="accordion__content m-4">
+            <hr>
+            <button class="accordion">What is Bookmark</button>
+        
+                <div class="panel">
+                <p class="p-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus totam ad atque harum molestiae assumenda, alias accusantium a similique cupiditate praesentium! In, sunt similique. Consequuntur iste autem, maiores eos eum dolorum error fugit vel numquam! Ipsam voluptates, enim adipisci commodi quisquam quod.</p>
+                </div>
+                <hr>
+                <button class="accordion">How can I request a new browser</button>
+                <div class="panel">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus in quas consequatur delectus officiis voluptas voluptatum soluta quod facilis cum sit molestiae deserunt quibusdam aliquam id veritatis autem aut, maiores, aliquid accusantium! Possimus, necessitatibus alias. Hic illo doloribus ab illum facere quia.</p>
+                </div>
+                <hr>
+                <button class="accordion">Is there a mobile app?</button>
+                <div class="panel">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit animi eligendi maxime nihil impedit praesentium quam modi soluta ducimus assumenda natus, ullam possimus quas? Optio in voluptatum porro sapiente et provident repellendus expedita, quae suscipit dignissimos, eos natus architecto accusantium dolorum? Enim!</p>
+                </div>
+                <hr>
+                <button class="accordion">What about other Chromium browsers?</button>
+                <div class="panel">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit minus tempora odit, ut placeat maxime quam quia provident. Voluptates temporibus aperiam natus repudiandae minus aspernatur dolore modi cum accusamus, aliquam laboriosam alias perferendis voluptatum eius. Laborum reprehenderit, doloremque facilis iusto facere architecto. </p>
+                </div>
+                <hr>
+        </div>
+        <a href="#" class="btn btn-primary m-3">More Info</a>
+    </section>
+   <!--  <section class="joined">
+        <div class="joined__content  py-3">
+            <span class="sm">35,000+  ALREADY JOINED</span>
+            <p class="md">Stay up-to-date with what <br> we're doing</p>
+            <form action="/" class="form-control" id="form">
+                <div class="form">
+                    <div class="input__box m-1">
+                        <input type="email" id="email" class="input" placeholder="Enter your email address">
+                        <i id="icon" class="fas fa-exclamation-circle"></i>
+                        <small class="error ">Error message</small>
+                    </div>
+                    <button class="btn btn-danger">Contact Us</button>
+                </div> 
+            </form>
+        </div>
+    </section>
+    <footer class="">
+        <div class="main__footer p-2 container">
+            <div class="main__footer-right">
+                <img src="images/logo-bookmark2.svg" alt="">
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="main__footer-social">
+                <div class="social_icon p-0">
+                    <i class="fab fa-facebook-square"></i>
+                </div>
+                <div class="social_icon p-0">
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+    
+
+    <script src="app.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
