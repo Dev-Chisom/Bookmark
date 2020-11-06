@@ -605,7 +605,7 @@ i {
     display: block;
     transition: 0.3s ease-in-out;
   }
-  .nav__links .btn {
+  .nav__link .btn {
     width: 100%;
     color: #f4f4f4;
     padding: 20px 130px;
@@ -619,7 +619,7 @@ i {
     padding: 10px;
     color: #fff;
   }
-  .nav__links li {
+  .nav__link li {
     border-bottom: 1px solid #ccc;
     border-top: 1px solid #ccc;
     border-spacing: 5px;
