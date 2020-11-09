@@ -3,67 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/form.css">
-    <title>Bookmark landing page | Frontend Mentor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/f673f835d1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/form.css">
+    <title>Sign up page</title>
 </head>
 <body>
-    <div class="container center">
-        <div class="col-lg-8 m-auto d-block">
-            <form action="#" id="form" onsubmit="return validation()">
-                <div class="login">
-                    <div class="title">
-                        <h1>Sign Up</h1>
-                        <p>Please fill in this form to create an account!</p>
+    <div class="wrapper">
+        <div class="form">
+            <div class="form-header">
+                <h3>Sign Up</h3>
+                <p>Already a member? <a href="login.html" class="login-active">Log in</a></p>
+            </div>
+            <div class="form-body" >
+                <form action="#" autocomplete="off" novalidate >
+                    <div class="form-group ">
+                        <div>
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control"  id="firstName" required/>
+                            <i class="fas fa-exclamation-circle move"></i><i class="fas fa-check-circle move"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div >
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName"  required/>
+                            <i class="fas fa-exclamation-circle sec"></i><i class="fas sec fa-check-circle"></i>
+                            <small class="move">Error message</small>
+                        </div>
+                        
+                        
                     </div>
-                    <hr>
-                <div class="form-group">
-                    <label for="">Last Name: </label>
-                    <input type="text" name="user" class="form-control" id="user" autocomplete="off">
-
-                    <span id="usernames" class="text-danger font-weight-bold"></span>
-                </div>
-                <div class="form-group">
-                    <label for="">First Name: </label>
-                    <input type="text" name="user" class="form-control" id="users" autocomplete="off">
-
-                    <span id="userNames" class="text-danger font-weight-bold"></span>
-                </div>
-                <div class="form-group">
-                    <label for="">Password: </label>
-                    <input type="password" name="pass" class="form-control" id="pass" autocomplete="off">
-                    <span id="passwords" class="text-danger font-weight-bold"></span>
-                </div>
-                <div class="form-group">
-                    <label for="">Confirm Password: </label>
-                    <input type="password" name="conpass" class="form-control" id="conpass" autocomplete="off">
-                    <span id="confirmpass" class="text-danger font-weight-bold"></span>
-                </div>
-                <div class="form-group">
-                    <label for="">Mobile Number: </label>
-                    <input type="number" name="mobile" class="form-control" id="mobileNumber" autocomplete="off">
-                    <span id="mobileNumbers" class="text-danger font-weight-bold"></span>
-                </div>
-                <div class="form-group">
-                    <label for="">Email: </label>
-                    <input type="text" name="email" class="form-control" id="email" autocomplete="off">
-                    <span id="emails" class="text-danger font-weight-bold"></span>
-                </div>
-                <div class="policy">
-                    <input type="checkbox" class="checked" name="checkbox" id="checked" >
-                    <span>I accept the <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>.</span>
-                </div>
-                <button id="button" class="signin-button">Submit</button>
-                <div class="loader"></div>
-            
-                <div class="link">
-                    Already have an account? <a href="login.html">Login here</a>
-                </div>
-                </div>
-             
-            </form>
+                    <div class="form-group">
+                        <div>
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control form-email" id="email" required />
+                         <i class="fas fa-exclamation-circle"></i><i class="fas fa-check-circle"></i>
+                        <small>Error message</small>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div>
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" required/>
+                        <i class="fas fa-exclamation-circle"></i><i class="fas fa-check-circle"></i>
+                        <small>Error message</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="confirmPass">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPass" required/>
+                            <i class="fas fa-exclamation-circle"></i><i class="fas fa-check-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="form-button" disabled>Register </button>
+                    </div>
+                 
+                </form>
+           
+            </div>
         </div>
     </div>
-
-  <script src="signup.js"></script>
+    <script src="form.js"></script>
 </body>
 </html>

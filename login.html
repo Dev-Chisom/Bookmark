@@ -3,69 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/f673f835d1.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/form.css">
-    <title>Bookmark landing page | Frontend Mentor</title>
+    <title>Sign up page</title>
 </head>
 <body>
-    <div class="container center">
-        <div>
-            <form action="#" id=loginForm onsubmit="return validation()">
-                <div class="login">
-                    <div class="title">
-                        <h1>Login</h1>
-                    </div>
-                    <hr>
+    <div class="wrapper">
+        <div class="form">
+            <div class="form-body" >
+                <form action="#" autocomplete="off" novalidate >
                     <div class="form-group">
-                        <label for="">Email: </label>
-                        <input type="text" name="email" id="email" autocomplete="off">
-                        <span id="emails" class="text-danger"></span>
+                        <div>
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control form-email" id="email" required />
+                         <i class="fas fa-exclamation-circle"></i><i class="fas fa-check-circle"></i>
+                        <small>Error message</small>
+                        </div>
                     </div>
-
+                    <div class="form-group ">
+                        <div>
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" required/>
+                        <i class="fas fa-exclamation-circle"></i><i class="fas fa-check-circle"></i>
+                        <small>Error message</small>
+                        </div>
+                    </div>
                     <div class="form-group">
-                        <label for="">Password: </label>
-                        <input type="password" name="pass" id="pass" autocomplete="off">
-                        <span id="passwords" class="text-danger"></span>
+                        <div>
+                            <label for="confirmPass">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPass" required/>
+                            <i class="fas fa-exclamation-circle"></i><i class="fas fa-check-circle"></i>
+                            <small>Error message</small>
+                        </div>
                     </div>
-                    <button id="button" class="signin-button">Login</button>
-                    <div class="loader"></div>
-                </div>
-             
-            </form>
+                    <div class="form-group">
+                        <button class="form-button" disabled>Register </button>
+                    </div>
+                 
+                </form>
+           
+            </div>
         </div>
     </div>
-
-    <script>
-     const validation = () =>{
-        const email = document.querySelector('#email').value;
-        const pass = document.querySelector('#pass').value;
-        // const button = document.querySelector('#button');
-        const loader = document.querySelector(".loader");
-
-
-                
-        if(email == "") {
-            document.querySelector('#emails').innerHTML = "Please enter your email";
-            return false;
-        }
-        if(email.indexOf('@')<= 0){
-            document.querySelector('#emails').innerHTML = "@ Invalid Position";
-            return false;
-        }
-        if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')){
-            document.querySelector('#emails').innerHTML = ". Invalid Position";
-            return false;
-        }
-
-        if((pass.length < 8) || (pass.length > 20)){
-        document.querySelector('#passwords').innerHTML = "**Please enter a length between 8 and 20";
-        return false;  
-        }
-        if(pass === ""){
-            document.querySelector('#confirmpass').innerHTML = "Please enter your password";
-            return false;
-        }
-     }
-
-    </script>
+    <script src="form.js"></script>
 </body>
 </html>
