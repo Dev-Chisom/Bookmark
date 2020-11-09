@@ -1,6 +1,6 @@
 
 
-//   globals
+
 let  passwordValue=""
 let firstnameValidate=false
 let lastValidate=false
